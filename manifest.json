@@ -1,0 +1,25 @@
+{
+  "name": "Instablam",
+  "short_name": "Instablam App",
+  "start_url": "/",
+  "background_color": "#4c72af",
+  "theme_color": "#4c72af",
+  "orientation": "natural",
+  "display": "standalone",
+  "dir": "ltr",
+  "lang": "en-US",
+  "description": "with Instablam you can take a picture, apply filters, and draw on it",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "assets/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

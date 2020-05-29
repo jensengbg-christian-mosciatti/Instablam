@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <title>Instablam</title>
+  </head>
+  <body>
+    <header>
+      <h1>Instablam</h1>
+    </header>
+
+    <section class="wrapper">
+      <section class="wrapper-video">
+        <div class="video-ph">
+          <h3>Start my Video</h3>
+          <h4 class="video-ph--info"></h4>
+        </div>
+
+        <video class="camera hide"></video>
+        <!-- <img id="photo" class="photo" src="" alt="photo" /> -->
+        <!-- <div id="canvascont"></div> -->
+        <canvas
+          id="canvas"
+          class="hide"
+          data-caman-hidpi-disabled="true"
+        ></canvas>
+      </section>
+      <section class="wrapper-btns">
+        <div class="main-btns">
+          <button class="btn btn-filter">
+            <!-- <img src="./assets/filter.svg" alt="Filters" /> -->
+          </button>
+          <!-- <div class="cambtn-container"> -->
+          <button class="btn camera-btn">
+            START camera
+          </button>
+          <button class="btn capture-btn hide">Take photo</button>
+          <!-- </div> -->
+          <button class="btn btn-draw">
+            <!-- <img src="./assets/draw.svg" alt="Draw on the image" /> -->
+          </button>
+        </div>
+        <!-- <button class="caman-btn">Caman</button> -->
+        <a id="download" download="image.jpg" href="">Download image</a>
+        <!-- <span id="coords"></span> -->
+      </section>
+
+      <section class="wrapper-filters hide opacity">
+        <div class="slidercontainer">
+          <div class="slider-block">
+            <label for="camgreyscale">Greyscale</label>
+            <div>
+              <input
+                id="camgreyscale"
+                camanprop="greyscale"
+                class="checkbox"
+                type="checkbox"
+              />
+              <!-- <span id="camgreyscaletxt">0</span> -->
+            </div>
+          </div>
+          <div class="slider-block">
+            <label for="caminvert">Invert</label>
+            <div>
+              <input
+                id="caminvert"
+                camanprop="invert"
+                class="checkbox"
+                type="checkbox"
+              />
+              <!-- <span id="caminverttxt">0</span> -->
+            </div>
+          </div>
+          <div class="slider-block">
+            <label for="cambright">Brightness</label>
+            <div>
+              <input
+                id="cambright"
+                camanprop="brightness"
+                class="slider"
+                type="range"
+                min="-100"
+                max="+100"
+                value="0"
+              />
+              <span id="cambrighttxt">0</span>
+            </div>
+          </div>
+          <div class="slider-block">
+            <label for="camcontrast">Contrast</label>
+            <div>
+              <input
+                id="camcontrast"
+                camanprop="contrast"
+                camanmultiplier="0.5"
+                class="slider"
+                type="range"
+                min="-100"
+                max="100"
+                value="0"
+              />
+              <span id="camcontrasttxt">0</span>
+            </div>
+          </div>
+          <div class="slider-block">
+            <label for="camexposure">Exposure</label>
+            <div>
+              <input
+                id="camexposure"
+                camanprop="exposure"
+                class="slider"
+                type="range"
+                min="-100"
+                max="+100"
+                value="0"
+              />
+              <span id="camexposuretxt">0</span>
+            </div>
+          </div>
+          <div class="slider-block">
+            <label for="camvibrance">Vibrance</label>
+            <div>
+              <input
+                id="camvibrance"
+                class="slider"
+                camanprop="vibrance"
+                type="range"
+                min="-100"
+                max="100"
+                value="0"
+              />
+              <span id="camvibrancetxt">0</span>
+            </div>
+          </div>
+          <div class="slider-block">
+            <label for="camnoise">Noise</label>
+            <div>
+              <input
+                id="camnoise"
+                class="slider"
+                camanprop="noise"
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+              />
+              <span id="camnoisetxt">0</span>
+            </div>
+          </div>
+          <div class="slider-block">
+            <label for="camsepia">Sepia</label>
+            <div>
+              <input
+                id="camsepia"
+                class="slider"
+                camanprop="sepia"
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+              />
+              <span id="camsepiatxt">0</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <div class="push-btn-cont">
+      <button class="btn" id="btn-push">Enable Push Notifications</button>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/exif-js"></script> -->
+    <!-- <script src="js/ImageUploader.js"></script> -->
+    <!-- <script src="js/load-image.min.all.js" defer></script> -->
+    <script src="js/caman.min.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
+  </body>
+</html>
